@@ -62,7 +62,7 @@ def fetch_poster(movie_id):
         response = requests.get(
             f"https://api.themoviedb.org/3/movie/{movie_id}?api_key={api_key}&language=en-US"
         )
-        response = requests.get(f'https://api.themoviedb.org/3/movie/{movie_id}?api_key=94ab12e0d53c6bab582ee93fe58cfebc&language=en-US')
+
         data = response.json()
         poster_path = data.get('poster_path')
         if poster_path:
